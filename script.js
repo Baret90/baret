@@ -1,7 +1,9 @@
-
-const menuToggle = document.getElementById('menu-toggle');
-const mobileNav = document.getElementById('mobile-nav');
-
-menuToggle.addEventListener('click', () => {
-  mobileNav.classList.toggle('open');
+// Animasi sederhana saat klik tombol
+document.querySelectorAll('.nav-button, .footer-button').forEach(button => {
+  button.addEventListener('click', () => {
+    button.classList.add('active');
+    setTimeout(() => {
+      button.classList.remove('active');
+    }, 200);
+  });
 });
