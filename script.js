@@ -1,4 +1,3 @@
-// Animasi sederhana saat klik tombol
 document.querySelectorAll('.nav-button, .footer-button').forEach(button => {
   button.addEventListener('click', () => {
     button.classList.add('active');
