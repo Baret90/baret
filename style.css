@@ -1,121 +1,40 @@
-/* Reset dasar */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-/* Body */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #000; /* Hitam */
-  color: #fff; /* Putih */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
 }
-
-/* Header */
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  background-color: #000;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+header {
+    text-align: center;
+    padding: 10px;
 }
-
 .logo {
-  width: 60px;
-  height: auto;
+    max-height: 80px;
 }
-
-.menu {
-  display: flex;
-  gap: 15px;
-}
-
-.menu-item {
-  color: gold;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 8px 15px;
-  border-radius: 8px;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.menu-item:hover {
-  background-color: rgba(255, 215, 0, 0.2);
-  transform: scale(1.05);
-}
-
-/* Section */
-.section {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.section h1,
-.section h2 {
-  color: gold;
-  margin-bottom: 20px;
-}
-
-.section p {
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-/* Hero photo */
-.hero-photo {
-  width: 90%;
-  max-width: 400px;
-  margin-top: 20px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px gold;
-}
-
-/* Footer */
-.footer {
-  margin-top: 50px;
-  padding: 20px;
-  background-color: #111;
-  text-align: center;
-}
-
-.footer-menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.footer-item {
-  color: gold;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 6px 12px;
-  border: 1px solid gold;
-  border-radius: 8px;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.footer-item:hover {
-  background-color: gold;
-  color: #000;
-  transform: scale(1.05);
-}
-
-.footer p {
-  font-size: 14px;
-  color: #888;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .menu {
-    flex-direction: column;
+.menu-atas, .menu-bawah {
+    display: flex;
+    justify-content: center;
     gap: 10px;
-  }
+    margin: 10px 0;
+}
+.menu-atas button, .menu-bawah button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+.menu-atas button:active, .menu-bawah button:active {
+    transform: scale(0.95);
+}
+.hero {
+    text-align: center;
+    margin: 20px 0;
+}
+.foto-hero {
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
 }

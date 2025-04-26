@@ -1,47 +1,37 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BARISAN REMAJA TEMPEL</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Anda</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <img src="image/logo.gif" alt="Logo" class="logo">
+    </header>
 
-  <!-- Header -->
-  <header class="header">
-    <!-- Logo -->
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAF4UlEQVR4Xu2aT4gcVRiGv2cnEkxIiIITi0E4hBQkBkUQ2piISCKKgo4hMpGkL2F3Sy1g4ELTDUYsgwYhJGaCxiDCQbiYBR5QUJDSgHhrbtxuqZO8/uXeeu/tdZnVn2Tz17b+R3vd+79n33PZmZmZmZmZmZmZmZmZmZkZsroKbwHugNM9xQuwBLADWgEdALbI2M0h/jY1wK2AAthXZdf8GuAXmAC9gC7gAhoK6kC7CBbDLOg3KXn8Ip4Qq5ksgrBBcWskocgiYp6lLbRg7kRvUVuUHgSfF3IgkRChRWQzmjqpmAO8T7UX4tw+Ge9UgprjvTfSbyXMeLwDaGjpYUI5JHR6ii1NYco+FbUE7VDvD8FzL0da4PMipgM2bDnqgDeSrzrRi2aOgkoeHCCMmIsFO9AFavtQp03vwBbVDtfE8uU8v8k+V+JKbMTrI0lHsbD8LraYZhGwC2FFEBU9AfD0Vqx+xAiHFVmKiMNAMIA12qAEqKlI3txHo1K6B0r7IAhBdxrZ6CZ0V05NVT9whYCijM5x1qoWIAKiU3MxPC6bwDovV+gKsAdAUcBsC2Q0PWi9AfCqv5EzJ7+wGkH2mqxF7GhA6UdB9yG2ofpBFuDEcF5rNFRdfxyo0CBm2+4Qz2u+xLgFgTbID07UYMGje4AZ3ShX1pwq8IfE7ZPvVGOZ3XBLXAh1LFD64B1QCkZ3UygvWAhPpTpg3OKWVC6xrJRoN15frFKqXY27Cbl+qWbA2U+ujQ8t6lsS5mETDj0O38Zk7hVLoz1+1wUPAaZ35paxnJeK8qUe9MhvE7aLsGToE+z9Zw/j3wDKXkS1lVd5Vi84r5wKoa2dTcfmE7fU7AuAGkD3QbOdy95Rf9hSG54JhGR2TFP7VTnX6h7iHg6brscOMuJGfFPf1lF4XfxKfgH2/VGdR10BU0AAAAASUVORK5CYII=" alt="Logo BRT" class="logo">
-
-    <!-- Menu Utama -->
-    <nav class="menu">
-      <a href="#beranda" class="menu-item">Beranda</a>
-      <a href="#tentang" class="menu-item">Tentang Kami</a>
-      <a href="#program" class="menu-item">Program</a>
-      <a href="#galeri" class="menu-item">Galeri</a>
-      <a href="#profil" class="menu-item">Profil</a>
+    <nav class="menu-atas">
+        <button>Beranda</button>
+        <button>Tentang</button>
+        <button>Galeri</button>
+        <button>Program</button>
+        <button>Profil</button>
     </nav>
-  </header>
 
-  <!-- Hero Section -->
-  <section id="beranda" class="section">
-    <h1>Selamat Datang di BARISAN REMAJA TEMPEL</h1>
-    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAAAAAAD/2wCEAAkGBxMTEhMTExIVFhUXGRgYFxgYFxgYGBgXGhgXGBcXFxgYHSggGBolHRgYITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGy0lICYtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKgBLAMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAACBQYBB//EADkQAAICAQMBBQYEAwkAAAAAAAABAhEDEiExQVEFE2FxgZGh8AYiMkJSscHhFCOy8RYzgpKi/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAECAwQF/8QAKBEBAAICAQIFBAMAAAAAAAAAAAECAxEEEiExQRMUIjJRYXGBkaGx0fCR/9oADAMBAAIRAxEAPwB1lREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAX6igX2W8k3My/MYqRFAkA1ttoG7nFazgbV4XodjpV3Ak0hOog2sxGC0X0MGWbuw1DWQ9vMDKO+66b0mtosnA+Z7OwG6M1NBvhL0Kf2a/Ki21oNbRA+ILwM2fL/8Ayt/6FRG7DSp3MEyt4QAnT1WvbOJ8vL0h88XCMpAmVCNzYAQD6K1cJe9llxR2TMeMg1tHPQrkD0mp7r5ryDeBBcdsAaqI55v4epjTo0iM3G52yg87lg2l9FjEbdQ6jWtCWcMoIObHBxvqUGPRphgqDMgLncqHbn8V1JczRrr6FB6js9Q6VPOOhAHHEeB+Ag+/U1Lo1F5FYzRUyl0DQYJH8B93r0WxGcYgfVnuf4ulUuEBPEgWJzqu5nJzqDd5aG9kHg6fKftVItyoQgaxPB8NP4zvpUlvqQaaY4hwc4X5nPqtj4PtVGkXkQmuoEEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQf/Z" alt="Foto Grup" class="hero-photo">
-  </section>
+    <section class="hero">
+        <img src="image/foto.jpg" alt="Foto Grup" class="foto-hero">
+    </section>
 
-  <!-- Footer Section -->
-  <footer class="footer">
-    <div class="footer-menu">
-      <a href="#livechat" class="footer-item">Live Chat</a>
-      <a href="https://instagram.com" class="footer-item" target="_blank">Instagram</a>
-      <a href="https://tiktok.com" class="footer-item" target="_blank">TikTok</a>
-      <a href="#kontak" class="footer-item">Kontak</a>
-      <a href="#visimisi" class="footer-item">Visi Misi</a>
-    </div>
-    <p>© 2025 BARISAN REMAJA TEMPEL</p>
-  </footer>
+    <nav class="menu-bawah">
+        <button>Live Chat</button>
+        <button>Instagram</button>
+        <button>Tiktok</button>
+        <button>Kontak</button>
+        <button>Visi Misi</button>
+    </nav>
 
-  <script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
