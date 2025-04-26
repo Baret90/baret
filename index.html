@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -6,81 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Barisan Remaja Tempel</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<header>
+<div class="background"></div>
+
+<header class="header-top">
   <div class="logo">BRT</div>
-  <nav id="nav-menu">
-    <a href="#beranda">Beranda</a>
-    <a href="#tentang">Tentang Kami</a>
-    <a href="#program">Program</a>
-    <a href="#galeri">Galeri</a>
-    <a href="#kontak">Kontak</a>
-    <a href="#profil">Profil</a>
-  </nav>
-  <div class="menu-toggle" id="menu-toggle">
-    <span></span><span></span><span></span>
-  </div>
-  <div class="mobile-nav" id="mobile-nav">
-    <a href="#beranda">Beranda</a>
-    <a href="#tentang">Tentang Kami</a>
-    <a href="#program">Program</a>
-    <a href="#galeri">Galeri</a>
-    <a href="#kontak">Kontak</a>
-    <a href="#profil">Profil</a>
-  </div>
 </header>
 
-<section id="beranda" class="hero">
-  <h2>Selamat Datang di BRT</h2>
-  <p>"Bersama, kita kuat. Bersatu, kita hebat."</p>
-</section>
-
-<section id="tentang">
-  <h2>Tentang Kami</h2>
-  <p>Barisan Remaja Tempel (BRT) adalah organisasi kepemudaan yang berfokus pada pemberdayaan generasi muda di wilayah Tempel dan sekitarnya.</p>
-</section>
-
-<section id="program" class="programs">
-  <h2>Program</h2>
-  <ul>
-    <li>Pelatihan Kepemimpinan</li>
-    <li>Kegiatan Sosial</li>
-    <li>Workshop Kreatif</li>
-    <li>Pengembangan Komunitas</li>
-  </ul>
-</section>
-
-<section id="galeri" class="gallery">
-  <h2>Galeri</h2>
-  <div class="gallery-container">
-    <div class="gallery-images">
-      <img src="https://via.placeholder.com/800x400?text=Kegiatan+1" alt="Kegiatan 1">
-      <img src="https://via.placeholder.com/800x400?text=Kegiatan+2" alt="Kegiatan 2">
-      <img src="https://via.placeholder.com/800x400?text=Kegiatan+3" alt="Kegiatan 3">
-    </div>
+<section class="nav-section">
+  <div class="nav-box">
+    <button class="nav-button"><i class="fas fa-home"></i><span>Beranda</span></button>
+    <button class="nav-button"><i class="fas fa-info-circle"></i><span>Tentang</span></button>
+    <button class="nav-button"><i class="fas fa-image"></i><span>Galeri</span></button>
+    <button class="nav-button"><i class="fas fa-list"></i><span>Program</span></button>
+    <button class="nav-button"><i class="fas fa-user-friends"></i><span>Profil</span></button>
   </div>
 </section>
 
-<section id="kontak" class="contact">
-  <h2>Kontak Kami</h2>
-  <form action="https://formspree.io/f/your-form-id" method="POST">
-    <input type="text" name="nama" placeholder="Nama" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea name="pesan" placeholder="Pesan" rows="5" required></textarea>
-    <button type="submit">Kirim</button>
-  </form>
-  <p>Atau hubungi kami di Instagram: @barisanremajatempel</p>
+<section class="content-section">
+  <h1>Selamat Datang di Barisan Remaja Tempel</h1>
+  <p>Bersama kita kuat, bersatu kita hebat.</p>
 </section>
 
-<section id="profil" class="profile">
-  <h2>Profil Organisasi</h2>
-  <p>Didirikan pada tahun 2020, BRT telah menjadi wadah bagi remaja untuk berkembang, berkreasi, dan berkontribusi dalam masyarakat.</p>
-</section>
-
-<footer>
-  &copy; 2025 Barisan Remaja Tempel. All Rights Reserved.
+<footer class="footer-bottom">
+  <div class="footer-box">
+    <button class="footer-button"><i class="fas fa-comments"></i><span>Live Chat</span></button>
+    <button class="footer-button"><i class="fab fa-instagram"></i><span>Instagram</span></button>
+    <button class="footer-button"><i class="fab fa-tiktok"></i><span>TikTok</span></button>
+    <button class="footer-button"><i class="fas fa-phone"></i><span>Kontak</span></button>
+    <button class="footer-button"><i class="fas fa-bullseye"></i><span>Visi Misi</span></button>
+  </div>
 </footer>
 
 <script src="js/script.js"></script>
