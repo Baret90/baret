@@ -1,16 +1,15 @@
-/* Warna tema */
-:root {
-  --primary-color: #d4af37; /* gold */
-  --background-color: #000000; /* black */
-  --text-color: #ffffff;
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Reset dasar */
+/* Body */
 body {
-  margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background-color: #000; /* Hitam */
+  color: #fff; /* Putih */
 }
 
 /* Header */
@@ -18,90 +17,105 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--background-color);
   padding: 10px 20px;
-  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.5);
+  background-color: #000;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-/* Logo */
 .logo {
-  height: 50px;
+  width: 60px;
+  height: auto;
 }
 
-/* Menu Utama */
-.menu a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: var(--primary-color);
-  font-weight: bold;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.menu a:hover,
-.menu a:active {
-  transform: scale(0.95);
-  color: #f0c838;
-}
-
-/* Menu Secondary */
-.menu-secondary {
+.menu {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  gap: 15px;
 }
 
-.menu-secondary a {
-  margin: 0 5px;
+.menu-item {
+  color: gold;
   text-decoration: none;
-  color: var(--text-color);
-  background-color: var(--primary-color);
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 14px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
 }
 
-.menu-secondary a:hover,
-.menu-secondary a:active {
-  background-color: #f0c838;
-  transform: scale(0.95);
+.menu-item:hover {
+  background-color: rgba(255, 215, 0, 0.2);
+  transform: scale(1.05);
 }
 
 /* Section */
 .section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
 }
 
-.section h1, .section h2 {
-  color: var(--primary-color);
+.section h1,
+.section h2 {
+  color: gold;
+  margin-bottom: 20px;
 }
 
-/* Hero Foto */
+.section p {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Hero photo */
 .hero-photo {
   width: 90%;
-  max-width: 600px;
+  max-width: 400px;
   margin-top: 20px;
   border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.5);
+  box-shadow: 0 0 20px gold;
 }
 
 /* Footer */
 .footer {
-  text-align: center;
+  margin-top: 50px;
   padding: 20px;
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background-color: #111;
+  text-align: center;
+}
+
+.footer-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-item {
+  color: gold;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 12px;
+  border: 1px solid gold;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.footer-item:hover {
+  background-color: gold;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.footer p {
   font-size: 14px;
+  color: #888;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .menu, .menu-secondary {
+  .menu {
     flex-direction: column;
-    align-items: center;
+    gap: 10px;
   }
 }
