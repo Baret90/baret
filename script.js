@@ -1,16 +1,14 @@
-// Animasi saat tombol diklik
-const menuLinks = document.querySelectorAll('.menu a, .menu-secondary a');
-
-menuLinks.forEach(link => {
-  link.addEventListener('mousedown', () => {
-    link.style.transform = 'scale(0.9)';
+// Tambahkan animasi saat tombol diklik
+document.querySelectorAll('.menu-item, .footer-item').forEach(button => {
+  button.addEventListener('mousedown', () => {
+    button.style.transform = 'scale(0.95)';
   });
 
-  link.addEventListener('mouseup', () => {
-    link.style.transform = 'scale(1)';
+  button.addEventListener('mouseup', () => {
+    button.style.transform = 'scale(1)';
   });
 
-  link.addEventListener('mouseleave', () => {
-    link.style.transform = 'scale(1)';
+  button.addEventListener('mouseleave', () => {
+    button.style.transform = 'scale(1)';
   });
 });
