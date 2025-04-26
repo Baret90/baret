@@ -1,0 +1,72 @@
+
+/* Style untuk Barisan Remaja Tempel */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #000;
+  color: gold;
+}
+header {
+  background: black;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+nav {
+  display: flex;
+  gap: 15px;
+}
+nav a {
+  color: gold;
+  text-decoration: none;
+}
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.menu-toggle span {
+  background: gold;
+  height: 3px;
+  margin: 4px 0;
+  width: 25px;
+}
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background: black;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  border: 1px solid gold;
+  border-radius: 5px;
+  padding: 10px;
+}
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1517511620798-cec17d428bc0') center/cover;
+  color: gold;
+  text-align: center;
+  padding: 120px 20px;
+}
+section {
+  padding: 60px 20px;
+}
+footer {
+  background: black;
+  text-align: center;
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  nav { display: none; }
+  .menu-toggle { display: flex; }
+  .mobile-nav { display: none; }
+  .mobile-nav.open { display: flex; }
+}
