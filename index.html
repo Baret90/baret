@@ -4,19 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Anda</title>
+    <title>BARISAN REMAJA TEMPEL</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background: #f0f0f0;
+            background: #111;
+            color: #fff;
             margin: 0;
             padding: 20px;
         }
-        img {
-            max-width: 150px;
+        img.logo {
+            width: 150px;
             margin: 20px auto;
+            display: block;
         }
         .button-container {
             display: flex;
@@ -26,21 +28,19 @@
             margin-top: 20px;
         }
         .btn {
-            background: linear-gradient(145deg, #1e90ff, #0077cc);
+            background: linear-gradient(145deg, gold, #b8860b);
             border: none;
-            color: white;
+            color: #000;
             padding: 15px 25px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
             font-size: 16px;
             border-radius: 12px;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            text-decoration: none;
         }
         .btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.7);
         }
         .btn i {
             margin-right: 8px;
@@ -49,22 +49,20 @@
 </head>
 <body>
 
-    <img src="images/logo.gif" alt="Logo">
+    <img src="images/logo_website.gif" alt="Logo" class="logo">
 
     <div class="button-container">
         <a href="#" class="btn"><i class="fas fa-home"></i> Beranda</a>
-        <a href="#" class="btn"><i class="fas fa-info-circle"></i> Tentang</a>
-        <a href="#" class="btn"><i class="fas fa-image"></i> Galeri</a>
+        <a href="#" class="btn"><i class="fas fa-info-circle"></i> Tentang Kami</a>
+        <a href="#" class="btn"><i class="fas fa-images"></i> Galeri</a>
         <a href="#" class="btn"><i class="fas fa-tasks"></i> Program</a>
-        <a href="#" class="btn"><i class="fas fa-user"></i> Profil</a>
+        <a href="#" class="btn"><i class="fas fa-id-card"></i> Profil</a>
     </div>
 
-    <img src="images/foto.jpg" alt="Foto Grup">
-
-    <div class="button-container">
+    <div class="button-container" style="margin-top: 40px;">
         <a href="#" class="btn"><i class="fas fa-comments"></i> Live Chat</a>
         <a href="#" class="btn"><i class="fab fa-instagram"></i> Instagram</a>
-        <a href="#" class="btn"><i class="fab fa-tiktok"></i> Tiktok</a>
+        <a href="#" class="btn"><i class="fab fa-tiktok"></i> TikTok</a>
         <a href="#" class="btn"><i class="fas fa-phone"></i> Kontak</a>
         <a href="#" class="btn"><i class="fas fa-bullseye"></i> Visi Misi</a>
     </div>
