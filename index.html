@@ -2,84 +2,36 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Baret</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <style>
-        body {
-            background: #f2f2f2;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        header {
-            background: #1d4ed8;
-            padding: 10px 0;
-            display: flex;
-            align-items: center;
-            justify-content: start;
-        }
-        .logo {
-            width: 80px;
-            margin-left: 20px;
-        }
-        nav {
-            margin: 20px 0;
-        }
-        .top-buttons a, .bottom-buttons a {
-            background: linear-gradient(145deg, #3b82f6, #1d4ed8);
-            border-radius: 12px;
-            padding: 10px 15px;
-            margin: 5px;
-            color: white;
-            font-size: 16px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: 0.3s;
-        }
-        .top-buttons a:hover, .bottom-buttons a:hover {
-            transform: scale(1.05);
-            background: linear-gradient(145deg, #1d4ed8, #3b82f6);
-        }
-        .top-buttons i, .bottom-buttons i {
-            margin-right: 8px;
-        }
-        .foto-grup {
-            width: 90%;
-            max-width: 600px;
-            margin: 20px auto;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Baret</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<style>
+body { background: #f2f2f2; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; padding: 20px; }
+.logo { position: absolute; top: 20px; left: 20px; width: 100px; }
+.foto-grup { width: 90%; max-width: 600px; margin: 80px auto 20px auto; border-radius: 15px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); }
+.nav-top, .nav-bottom { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 20px 0; }
+.button { background: linear-gradient(145deg, #3b82f6, #1d4ed8); border: none; border-radius: 12px; padding: 10px 15px; color: white; font-size: 14px; text-decoration: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: transform 0.2s, box-shadow 0.2s; }
+.button:hover { transform: scale(1.05); }
+.button:active { transform: scale(0.95); box-shadow: inset 0 4px 8px rgba(0,0,0,0.3); }
+</style>
 </head>
 <body>
-
-<header>
-    <img src="images/logo_website.gif" alt="Logo" class="logo">
-</header>
-
-<div class="top-buttons">
-    <a href="index.html"><i class="fas fa-home"></i> Beranda</a>
-    <a href="tentang.html"><i class="fas fa-info-circle"></i> Tentang</a>
-    <a href="program.html"><i class="fas fa-tasks"></i> Program</a>
-    <a href="visimisi.html"><i class="fas fa-bullseye"></i> Visi Misi</a>
-    <a href="#"><i class="fas fa-image"></i> Galeri</a>
+<img src="images/logo_website.gif" alt="Logo" class="logo">
+<div class="nav-top">
+    <a href="index.html" class="button"><i class="fas fa-home"></i> Beranda</a>
+    <a href="tentang.html" class="button"><i class="fas fa-info-circle"></i> Tentang</a>
+    <a href="program.html" class="button"><i class="fas fa-tasks"></i> Program</a>
+    <a href="visimisi.html" class="button"><i class="fas fa-bullseye"></i> Visi Misi</a>
+    <a href="struktur.html" class="button"><i class="fas fa-users"></i> Struktur</a>
 </div>
-
 <img src="images/foto_grup.jpg" alt="Foto Grup" class="foto-grup">
-
-<div class="bottom-buttons">
-    <a href="#"><i class="fas fa-comments"></i> Live Chat</a>
-    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-    <a href="#"><i class="fab fa-tiktok"></i> TikTok</a>
-    <a href="#"><i class="fas fa-phone"></i> Kontak</a>
-    <a href="#"><i class="fas fa-user"></i> Profil</a>
+<div class="nav-bottom">
+    <a href="#" class="button"><i class="fas fa-comments"></i> Live Chat</a>
+    <a href="#" class="button"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="#" class="button"><i class="fab fa-tiktok"></i> TikTok</a>
+    <a href="#" class="button"><i class="fas fa-phone"></i> Kontak</a>
+    <a href="#" class="button"><i class="fas fa-user"></i> Profil</a>
 </div>
-
 </body>
 </html>
