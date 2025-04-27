@@ -1,34 +1,73 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BARISAN REMAJA TEMPEL</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Anda</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        img {
+            max-width: 150px;
+            margin: 20px auto;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .btn {
+            background: linear-gradient(145deg, #1e90ff, #0077cc);
+            border: none;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+        .btn i {
+            margin-right: 8px;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <img src="images/logo.gif" alt="Logo BARISAN REMAJA TEMPEL" class="logo">
-    
-    <div class="nav-button-group">
-      <a href="#beranda" class="button">Beranda</a>
-      <a href="#tentang" class="button">Tentang Kami</a>
-      <a href="#galeri" class="button">Galeri</a>
-      <a href="#program" class="button">Program</a>
-      <a href="#profil" class="button">Profil</a>
+
+    <img src="images/logo.gif" alt="Logo">
+
+    <div class="button-container">
+        <a href="#" class="btn"><i class="fas fa-home"></i> Beranda</a>
+        <a href="#" class="btn"><i class="fas fa-info-circle"></i> Tentang</a>
+        <a href="#" class="btn"><i class="fas fa-image"></i> Galeri</a>
+        <a href="#" class="btn"><i class="fas fa-tasks"></i> Program</a>
+        <a href="#" class="btn"><i class="fas fa-user"></i> Profil</a>
     </div>
 
-    <img src="images/foto.jpg" alt="Foto Utama" class="foto">
+    <img src="images/foto.jpg" alt="Foto Grup">
 
-    <div class="social-button-group">
-      <a href="#livechat" class="button">Live Chat</a>
-      <a href="#instagram" class="button">Instagram</a>
-      <a href="#tiktok" class="button">Tiktok</a>
-      <a href="#kontak" class="button">Kontak</a>
-      <a href="#visimisi" class="button">Visi Misi</a>
+    <div class="button-container">
+        <a href="#" class="btn"><i class="fas fa-comments"></i> Live Chat</a>
+        <a href="#" class="btn"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#" class="btn"><i class="fab fa-tiktok"></i> Tiktok</a>
+        <a href="#" class="btn"><i class="fas fa-phone"></i> Kontak</a>
+        <a href="#" class="btn"><i class="fas fa-bullseye"></i> Visi Misi</a>
     </div>
-  </div>
 
-  <script src="script.js"></script>
 </body>
 </html>
