@@ -1,71 +1,73 @@
-
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BARISAN REMAJA TEMPEL</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Website Baret</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
-            background: #111;
-            color: #fff;
-            margin: 0;
             padding: 20px;
         }
-        img.logo {
+        .logo {
             width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .foto-grup {
+            width: 90%;
+            max-width: 600px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
             margin: 20px auto;
-            display: block;
         }
         .button-container {
+            margin-top: 30px;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
-            margin-top: 20px;
         }
-        .btn {
-            background: linear-gradient(145deg, gold, #b8860b);
+        .button {
+            background: linear-gradient(145deg, #3b82f6, #1d4ed8);
             border: none;
-            color: #000;
-            padding: 15px 25px;
-            font-size: 16px;
             border-radius: 12px;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            padding: 12px 20px;
+            color: white;
+            font-size: 16px;
             text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
         }
-        .btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.7);
+        .button:hover {
+            transform: scale(1.05);
+            background: linear-gradient(145deg, #1d4ed8, #3b82f6);
         }
-        .btn i {
+        .button i {
             margin-right: 8px;
         }
     </style>
 </head>
-<body>
+<body><img src="images/logo.gif" alt="Logo" class="logo">
 
-    <img src="images/logo_website.gif" alt="Logo" class="logo">
+<div>
+    <img src="images/foto_grup.jpg" alt="Foto Grup" class="foto-grup">
+</div>
 
-    <div class="button-container">
-        <a href="#" class="btn"><i class="fas fa-home"></i> Beranda</a>
-        <a href="#" class="btn"><i class="fas fa-info-circle"></i> Tentang Kami</a>
-        <a href="#" class="btn"><i class="fas fa-images"></i> Galeri</a>
-        <a href="#" class="btn"><i class="fas fa-tasks"></i> Program</a>
-        <a href="#" class="btn"><i class="fas fa-id-card"></i> Profil</a>
-    </div>
-
-    <div class="button-container" style="margin-top: 40px;">
-        <a href="#" class="btn"><i class="fas fa-comments"></i> Live Chat</a>
-        <a href="#" class="btn"><i class="fab fa-instagram"></i> Instagram</a>
-        <a href="#" class="btn"><i class="fab fa-tiktok"></i> TikTok</a>
-        <a href="#" class="btn"><i class="fas fa-phone"></i> Kontak</a>
-        <a href="#" class="btn"><i class="fas fa-bullseye"></i> Visi Misi</a>
-    </div>
+<div class="button-container">
+    <a href="#" class="button"><i class="fas fa-home"></i> Beranda</a>
+    <a href="#" class="button"><i class="fas fa-info-circle"></i> Tentang</a>
+    <a href="#" class="button"><i class="fas fa-image"></i> Galeri</a>
+    <a href="#" class="button"><i class="fas fa-tasks"></i> Program</a>
+    <a href="#" class="button"><i class="fas fa-user"></i> Profil</a>
+    <a href="#" class="button"><i class="fas fa-comments"></i> Live Chat</a>
+    <a href="#" class="button"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="#" class="button"><i class="fab fa-tiktok"></i> TikTok</a>
+    <a href="#" class="button"><i class="fas fa-phone"></i> Kontak</a>
+    <a href="#" class="button"><i class="fas fa-bullseye"></i> Visi Misi</a>
+</div>
 
 </body>
 </html>
