@@ -1,37 +1,62 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Website Baret</title>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-<style>
-body { background: #f2f2f2; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; padding: 20px; }
-.logo { position: absolute; top: 20px; left: 20px; width: 100px; }
-.foto-grup { width: 90%; max-width: 600px; margin: 80px auto 20px auto; border-radius: 15px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); }
-.nav-top, .nav-bottom { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 20px 0; }
-.button { background: linear-gradient(145deg, #3b82f6, #1d4ed8); border: none; border-radius: 12px; padding: 10px 15px; color: white; font-size: 14px; text-decoration: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: transform 0.2s, box-shadow 0.2s; }
-.button:hover { transform: scale(1.05); }
-.button:active { transform: scale(0.95); box-shadow: inset 0 4px 8px rgba(0,0,0,0.3); }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karang Taruna BARET</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-<img src="images/logo_website.gif" alt="Logo" class="logo">
-<div class="nav-top">
-    <a href="index.html" class="button"><i class="fas fa-home"></i> Beranda</a>
-    <a href="tentang.html" class="button"><i class="fas fa-info-circle"></i> Tentang</a>
-    <a href="program.html" class="button"><i class="fas fa-tasks"></i> Program</a>
-    <a href="visimisi.html" class="button"><i class="fas fa-bullseye"></i> Visi Misi</a>
-    <a href="struktur.html" class="button"><i class="fas fa-users"></i> Struktur</a>
-</div>
-<img src="images/foto_grup.jpg" alt="Foto Grup" class="foto-grup">
-<div class="nav-bottom">
-    <a href="#" class="button"><i class="fas fa-comments"></i> Live Chat</a>
-    <a href="#" class="button"><i class="fab fa-instagram"></i> Instagram</a>
-    <a href="#" class="button"><i class="fab fa-tiktok"></i> TikTok</a>
-    <a href="#" class="button"><i class="fas fa-phone"></i> Kontak</a>
-    <a href="#" class="button"><i class="fas fa-user"></i> Profil</a>
-</div>
+  <!-- Musik -->
+  <audio autoplay loop hidden>
+    <source src="tanah_airku.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">BARET</div>
+    <nav class="nav">
+      <a href="index.html" class="btn">Beranda</a>
+      <a href="tentang.html" class="btn">Tentang</a>
+      <a href="program.html" class="btn">Program</a>
+      <a href="visimisi.html" class="btn">Visi Misi</a>
+      <a href="struktur.html" class="btn">Struktur</a>
+      <a href="galeri.html" class="btn">Galeri</a>
+      <a href="profil.html" class="btn">Profil</a>
+    </nav>
+  </header>
+
+  <!-- Info Berjalan -->
+  <div class="info-banner">
+    <div class="info-icon">i</div>
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+      SELAMAT DATANG DI WEBSITE BARISAN REMAJA TEMPEL (BARET)
+    </marquee>
+  </div>
+
+  <!-- Konten Utama -->
+  <main>
+    <section class="hero">
+      <h1>Selamat Datang di Karang Taruna BARET</h1>
+      <p>Organisasi Pemuda Desa Tempel, Siwal, Kaliwungu, Semarang.</p>
+    </section>
+
+    <!-- Saldo Kas -->
+    <section class="saldo">
+      <div class="card">
+        <h3>Saldo Kas Karang Taruna</h3>
+        <p>Rp 1.500.000,-</p>
+      </div>
+    </section>
+
+    <!-- Media Sosial -->
+    <footer class="footer">
+      <a href="https://www.tiktok.com/@baret.barisan.rem" target="_blank">TikTok</a>
+      <a href="https://www.instagram.com/brt_baretempel" target="_blank">Instagram</a>
+      <a href="https://whatsapp.com/dl/" target="_blank">WhatsApp</a>
+      <a href="https://wa.me/6281234567890" class="live-chat" target="_blank">Live Chat</a>
+    </footer>
+  </main>
 </body>
 </html>
