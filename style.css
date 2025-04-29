@@ -1,67 +1,118 @@
-/* Gaya tombol dengan efek glossy */
-.btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 160px;
-    height: 50px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 10px;
-    background: linear-gradient(45deg, #ff8800, #ff2200);
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Efek ikon pada tombol */
-.btn img {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #000000, #bfa046);
+  color: #fff;
+  line-height: 1.6;
 }
 
-/* Efek cahaya berjalan */
-.btn::before {
-    content: "";
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    width: 110%;
-    height: 110%;
-    border-radius: 12px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.7), transparent);
-    opacity: 0.8;
-    animation: glowing 2s infinite linear;
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: relative;
 }
 
-@keyframes glowing {
-    0% { left: -10%; }
-    50% { left: 100%; }
-    100% { left: -10%; }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-/* Efek tombol saat ditekan */
-.btn:active {
-    box-shadow: inset 0px 6px 8px rgba(0, 0, 0, 0.7);
-    transform: scale(0.95);
+.logo img {
+  height: 60px;
 }
 
-/* Tata letak navigasi */
-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    background: #222;
-    padding: 20px;
+.navbar {
+  display: flex;
+  gap: 20px;
 }
 
-nav ul li {
-    list-style: none;
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Marquee info */
+.marquee-container {
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.marquee-icon {
+  background: #ffc107;
+  color: black;
+  padding: 10px;
+  border-radius: 8px 0 0 8px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.marquee-text {
+  white-space: nowrap;
+  animation: scrollText 15s linear infinite;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Section & Content */
+main {
+  padding: 30px 40px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+/* Saldo Box */
+.saldo-box {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 300px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  background: rgba(0, 0, 0, 0.7);
+  color: #ccc;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
 }
