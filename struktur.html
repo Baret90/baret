@@ -1,1 +1,105 @@
-Halaman Struktur dengan bagan organisasi dan animasi.
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Struktur Organisasi BARET</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #000, #333);
+      color: white;
+    }
+
+    .container {
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 40px;
+      color: gold;
+    }
+
+    .box {
+      background: linear-gradient(145deg, #444, #111);
+      border: 1px solid gold;
+      padding: 15px 25px;
+      margin: 10px auto;
+      border-radius: 12px;
+      width: fit-content;
+      position: relative;
+      box-shadow: 0 0 10px gold;
+    }
+
+    .line {
+      width: 2px;
+      background: gold;
+      margin: 0 auto;
+      animation: flow 3s linear infinite;
+    }
+
+    @keyframes flow {
+      0% { height: 0; }
+      100% { height: 50px; }
+    }
+
+    .level {
+      margin-bottom: 40px;
+    }
+
+    .group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .box:hover {
+      transform: scale(1.03);
+      transition: 0.3s ease;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Struktur Organisasi Karang Taruna BARET</h1>
+
+    <div class="level">
+      <div class="box">PEMBINA UTAMA<br>Bpk. Sumadi</div>
+      <div class="line" style="height:50px;"></div>
+    </div>
+
+    <div class="level">
+      <div class="box">KETUA<br>Ms. Giono</div>
+      <div class="line" style="height:50px;"></div>
+    </div>
+
+    <div class="level">
+      <div class="box">WAKIL KETUA<br>Ms. Joko</div>
+      <div class="line" style="height:50px;"></div>
+    </div>
+
+    <div class="level group">
+      <div class="box">SEKRETARIS<br>1. Ms. Supriyadi<br>2. Ms. Suroso</div>
+      <div class="box">BENDAHARA<br>1. Ms. Sehmadi<br>2. Ms. Wahyu IS<br>3. Mb. Devi Sekar R</div>
+    </div>
+
+    <div class="level group">
+      <div class="box">SEKSI AGAMA<br>1.<br>2.</div>
+      <div class="box">SEKSI HUMAS<br>1.<br>2.</div>
+      <div class="box">SEKSI KEAMANAN<br>1.<br>2.</div>
+    </div>
+
+    <div class="level group">
+      <div class="box">SEKSI PENGEMBANGAN<br>1.<br>2.</div>
+      <div class="box">SEKSI PERLENGKAPAN<br>1.<br>2.</div>
+      <div class="box">SEKSI DOKUMENTASI<br>1.<br>2.</div>
+      <div class="box">ADMIN SOSMED<br>1.<br>2.</div>
+    </div>
+  </div>
+</body>
+</html>
