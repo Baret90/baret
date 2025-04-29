@@ -1,9 +1,34 @@
-document.querySelectorAll('.btn').forEach(button => {
-    button.addEventListener('mousedown', () => {
-        button.style.transform = 'scale(0.92)';
-    });
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barisan Remaja Tempel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>BARISAN REMAJA TEMPEL</h1>
+        <p>Komunitas Pemuda yang Bergerak untuk Perubahan</p>
+    </header>
 
-    button.addEventListener('mouseup', () => {
-        button.style.transform = 'scale(1)';
-    });
-});
+    <nav>
+        <ul>
+            <li><a href="#beranda" class="btn"><img src="icon-home.png" alt=""> Beranda</a></li>
+            <li><a href="#tentang" class="btn"><img src="icon-info.png" alt=""> Tentang</a></li>
+            <li><a href="#galeri" class="btn"><img src="icon-gallery.png" alt=""> Galeri</a></li>
+            <li><a href="#program" class="btn"><img src="icon-program.png" alt=""> Program</a></li>
+            <li><a href="#profil" class="btn"><img src="icon-user.png" alt=""> Profil</a></li>
+            <li><a href="#live-chat" class="btn"><img src="icon-chat.png" alt=""> Live Chat</a></li>
+            <li><a href="https://instagram.com" class="btn" target="_blank"><img src="icon-instagram.png" alt=""> Instagram</a></li>
+            <li><a href="https://tiktok.com" class="btn" target="_blank"><img src="icon-tiktok.png" alt=""> TikTok</a></li>
+            <li><a href="#kontak" class="btn"><img src="icon-phone.png" alt=""> Kontak</a></li>
+            <li><a href="#visi-misi" class="btn"><img src="icon-goal.png" alt=""> Visi Misi</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>&copy; 2025 Barisan Remaja Tempel</p>
+    </footer>
+</body>
+</html>
