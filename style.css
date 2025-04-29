@@ -1,36 +1,4 @@
-/* Gaya dasar */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-color: #f4f4f4;
-}
-
-header {
-    background-color: #007bff;
-    color: white;
-    padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Navigasi dengan efek tombol */
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    background: #222;
-    padding: 15px;
-}
-
-nav ul li {
-    list-style: none;
-}
-
-/* Tombol dengan efek glossy dan bayangan */
+/* Gaya tombol dengan efek glossy */
 .btn {
     display: flex;
     align-items: center;
@@ -43,17 +11,18 @@ nav ul li {
     font-weight: bold;
     color: white;
     padding: 15px 30px;
-    border-radius: 8px;
+    border-radius: 10px;
     background: linear-gradient(45deg, #ff8800, #ff2200);
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
     position: relative;
+    overflow: hidden;
     transition: all 0.3s ease-in-out;
 }
 
 /* Efek ikon pada tombol */
 .btn img {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     margin-right: 10px;
 }
 
@@ -65,9 +34,9 @@ nav ul li {
     left: -3px;
     width: 110%;
     height: 110%;
-    border-radius: 10px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), transparent);
-    opacity: 0.5;
+    border-radius: 12px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.7), transparent);
+    opacity: 0.8;
     animation: glowing 2s infinite linear;
 }
 
@@ -79,6 +48,20 @@ nav ul li {
 
 /* Efek tombol saat ditekan */
 .btn:active {
-    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.6);
-    transform: scale(0.92);
+    box-shadow: inset 0px 6px 8px rgba(0, 0, 0, 0.7);
+    transform: scale(0.95);
+}
+
+/* Tata letak navigasi */
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    background: #222;
+    padding: 20px;
+}
+
+nav ul li {
+    list-style: none;
 }
