@@ -1,6 +1,43 @@
-/* Gaya tombol dengan efek glossy */
+/* Gaya dasar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigasi dengan efek tombol */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    background: #222;
+    padding: 15px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+/* Tombol dengan efek glossy dan bayangan */
 .btn {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 50px;
+    text-align: center;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
@@ -11,6 +48,13 @@
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
     position: relative;
     transition: all 0.3s ease-in-out;
+}
+
+/* Efek ikon pada tombol */
+.btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
 }
 
 /* Efek cahaya berjalan */
@@ -37,27 +81,4 @@
 .btn:active {
     box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.6);
     transform: scale(0.92);
-}
-
-/* Tata letak navigasi lebih mirip dengan gambar */
-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    background: #222;
-    padding: 15px;
-}
-
-nav ul li {
-    list-style: none;
-}
-
-nav ul li a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 160px;
-    height: 50px;
-    text-align: center;
 }
