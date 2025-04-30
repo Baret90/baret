@@ -1,17 +1,19 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Fungsi scroll teks (jika digunakan)
-  const marquee = document.querySelector(".marquee-text");
-  if (marquee) {
-    console.log("Marquee aktif");
+// script.js
+
+// Efek ketik sambutan
+document.addEventListener("DOMContentLoaded", function () {
+  const welcomeText = "SELAMAT DATANG DI WEBSITE BARISAN REMAJA TEMPEL (BARET)";
+  const container = document.getElementById("sambutan");
+  let index = 0;
+
+  function typeWriter() {
+    if (index < welcomeText.length) {
+      container.innerHTML += welcomeText.charAt(index);
+      index++;
+      setTimeout(typeWriter, 70); // Kecepatan ketik
+    }
   }
 
-  // Tombol WhatsApp Live Chat
-  const waButton = document.getElementById("wa-livechat");
-  if (waButton) {
-    waButton.addEventListener("click", () => {
-      const phoneNumber = "6285712790226"; // Sudah disesuaikan format WA internasional
-      const message = encodeURIComponent("Halo, saya ingin bertanya...");
-      window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
-    });
-  }
+  container.innerHTML = "";
+  typeWriter();
 });
