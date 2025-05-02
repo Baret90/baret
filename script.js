@@ -1,2 +1,1 @@
-
-// Kosong sementara. Tambahkan fungsi JavaScript jika diperlukan nanti.
+// Tambahkan interaktivitas di sini jika diperlukan.
