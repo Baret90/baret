@@ -1,2 +1,1 @@
-
-// Kosong sementara. Tambahkan fungsi JavaScript jika diperlukan nanti.
+// Tidak diperlukan interaksi JS saat ini.
