@@ -26,7 +26,7 @@
   </header>
 
   <main class="content">
-    <h1>Selamat Datang di Website Karang Taruna BARET</h1>
+    <h1 id="welcome-message">Selamat Datang</h1>
     <p>Silakan pilih menu di atas untuk melihat informasi lebih lanjut.</p>
     <img src="kelompok.jpg" alt="Foto Anggota" class="main-photo">
   </main>
@@ -40,5 +40,12 @@
       <a href="https://whatsapp.com/channel/0029VbAZgCv6WaKfKd2Gih3I" class="button"><i class="fas fa-comments"></i> Live Chat</a>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const username = localStorage.getItem('username') || 'Pengunjung';
+      document.getElementById('welcome-message').innerText = 'Selamat Datang, ' + username;
+    });
+  </script>
 </body>
 </html>

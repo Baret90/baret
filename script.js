@@ -7,5 +7,6 @@ if (!localStorage.getItem('isLoggedIn')) {
 
 function logout() {
   localStorage.removeItem('isLoggedIn');
+  localStorage.removeItem('username');
   window.location.href = 'login.html';
 }

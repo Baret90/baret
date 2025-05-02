@@ -49,11 +49,12 @@
     function login() {
       const user = document.getElementById('username').value;
       const pass = document.getElementById('password').value;
-      if (user === 'admin' && pass === 'baret123') {
+      if (pass === 'baret123') {
         localStorage.setItem('isLoggedIn', 'true');
+        localStorage.setItem('username', user);
         window.location.href = 'index.html';
       } else {
-        alert('Nama pengguna atau kata sandi salah!');
+        alert('Kata sandi salah!');
       }
     }
   </script>
