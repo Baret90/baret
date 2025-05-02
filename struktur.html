@@ -3,23 +3,81 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Struktur Organisasi - Karang Taruna BARET</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .org-chart {
+      text-align: center;
+      margin: 30px auto;
+    }
+    .org-box {
+      border: 2px solid #004aad;
+      border-radius: 10px;
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: #f0f8ff;
+      font-weight: bold;
+      white-space: pre-line;
+    }
+    .org-connector {
+      height: 20px;
+      border-left: 2px solid #004aad;
+      margin: auto;
+    }
+    .org-sub {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  </style>
 </head>
 <body>
   <main class="content">
-    <h1>Struktur Organisasi</h1>
-    <ul style="text-align:left; max-width: 600px; margin: 20px auto;">
-      <li><strong>Ketua:</strong> Nama Ketua</li>
-      <li><strong>Wakil Ketua:</strong> Nama Wakil Ketua</li>
-      <li><strong>Sekretaris:</strong> Nama Sekretaris</li>
-      <li><strong>Bendahara:</strong> Nama Bendahara</li>
-      <li><strong>Seksi Kegiatan:</strong> Nama Anggota</li>
-      <li><strong>Seksi Sosial:</strong> Nama Anggota</li>
-      <li><strong>Seksi Pendidikan:</strong> Nama Anggota</li>
-    </ul>
+    <h1>Struktur Organisasi Karang Taruna BARET</h1>
+    <div class="org-chart">
+      <div class="org-box">Ketua:
+MS GIONO</div>
+      <div class="org-connector"></div>
+      <div class="org-box">Wakil Ketua:
+MS JOKO</div>
+      <div class="org-connector"></div>
+      <div class="org-sub">
+        <div class="org-box">Sekretaris:
+1. MS SUPRIYADI
+2. MS SUROSO</div>
+        <div class="org-box">Bendahara:
+1. MS SEHMADI
+2. MS WAHYU IS
+3. MB DEVI SEKAR R</div>
+      </div>
+      <div class="org-connector"></div>
+      <div class="org-sub">
+        <div class="org-box">Seksi Agama:
+1.
+2.</div>
+        <div class="org-box">Seksi Keamanan:
+1.
+2.</div>
+        <div class="org-box">Seksi Kesenian:
+1.
+2.</div>
+        <div class="org-box">Seksi Humas:
+1.
+2.</div>
+        <div class="org-box">Seksi Dokumentasi:
+1.
+2.</div>
+        <div class="org-box">Admin Sosmed:
+1.
+2.</div>
+        <div class="org-box">Pembantu Umum:
+Seluruh Anggota</div>
+      </div>
+    </div>
     <a href="index.html" class="button"><i class="fas fa-arrow-left"></i> Kembali ke Beranda</a>
   </main>
   <footer>
