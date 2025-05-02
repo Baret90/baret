@@ -1,63 +1,61 @@
 
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
 }
-
 header {
-  background-color: #004aad;
-  color: white;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
+    background-color: #004aad;
+    padding: 10px 20px;
 }
-
 .logo-container {
-  margin-right: 20px;
+    flex-shrink: 0;
 }
-
 .logo {
-  height: 50px;
+    height: 50px;
 }
-
-.nav-bar, .social-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+.top-nav {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
 }
-
-.nav-bar {
-  flex: 1;
+.top-nav a {
+    background: linear-gradient(145deg, #1e90ff, #005bb5);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 4px #003f7f;
+    transition: transform 0.1s, box-shadow 0.1s;
 }
-
-.button {
-  background: linear-gradient(145deg, #1e90ff, #005bb5);
-  color: white;
-  padding: 10px 15px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 4px #003f7f;
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+.top-nav a:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px #003f7f;
 }
-
-.button:active {
-  transform: translateY(3px);
-  box-shadow: 0 1px #003f7f;
+main {
+    padding: 20px;
+    text-align: center;
 }
-
-main.content {
-  padding: 40px;
-  text-align: center;
-}
-
 footer {
-  background-color: #ddd;
-  padding: 20px;
-  text-align: center;
+    padding: 20px;
+    background-color: #004aad;
+    text-align: center;
+}
+.social-buttons a {
+    display: inline-block;
+    background-color: #fff;
+    color: #004aad;
+    margin: 5px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.1s ease;
+}
+.social-buttons a:active {
+    transform: translateY(2px);
 }
