@@ -30,9 +30,13 @@
                 <button onclick="navigate('profil.html')"><i class="fas fa-user"></i> Profil</button>
                 <button onclick="navigate('saldo.html')"><i class="fas fa-wallet"></i> Saldo</button>
 <button onclick="navigate('galeri.html')"><i class="fas fa-images"></i> Galeri</button>
-            </nav>
+            
+<button onclick="logout()" class="logout-btn"><i class="fas fa-lock"></i> Keluar</button>
+
+</nav>
         </header>
-        <main>
+        <div id='userGreeting' style='text-align:center; margin-top:10px; font-weight:bold;'></div>
+<main>
             <img src="foto.jpg" class="main-photo" alt="Foto Utama">
             <audio autoplay loop style="display:none;">
                 <source src="tanah_airku.mp3" type="audio/mpeg">
