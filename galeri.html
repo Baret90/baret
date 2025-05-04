@@ -6,6 +6,16 @@
     <title>Galeri</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="galeri.js"></script>
+
+<script>
+window.onload = function () {
+    const currentUser = localStorage.getItem("currentUser");
+    if (!currentUser) {
+        window.location.href = "login.html";
+    }
+}
+</script>
+
 </head>
 <body>
     <header>
