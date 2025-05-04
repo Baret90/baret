@@ -6,10 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Karang Taruna BARET</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .logo-text-animate {
+      font-size: 28px;
+      font-weight: bold;
+      color: gold;
+      text-shadow: 0 0 10px orange;
+      animation: slideLogo 10s linear infinite;
+      white-space: nowrap;
+    }
+    @keyframes slideLogo {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    .foto-utama {
+      display: block;
+      margin: 30px auto;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 16px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.4);
+    }
+  </style>
 </head>
 <body>
   <header class="main-header">
-    <div class="logo-text">BARET</div>
+    <div class="logo-text-animate">BARET</div>
     <nav class="nav-buttons">
       <a href="index.html">Beranda</a>
       <a href="tentang.html">Tentang</a>
@@ -24,7 +46,9 @@
   <main>
     <h1>Selamat Datang di Website Resmi</h1>
     <h2>Karang Taruna BARET</h2>
-    <p style="text-align:center;margin-top:30px;">Silakan pilih menu di atas untuk menjelajahi informasi lengkap tentang organisasi.</p>
+    <p style="text-align:center;margin-bottom:30px;">Dapatkan info terbaru langsung dari website kami!</p>
+
+    <img src="foto.jpg" alt="Foto Anggota BARET" class="foto-utama" />
   </main>
 
   <audio autoplay hidden>
