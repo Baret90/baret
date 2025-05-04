@@ -1,1 +1,89 @@
-<!DOCTYPE html><html><head><meta charset='UTF-8'><title>BARET</title><link rel='stylesheet' href='style.css'></head><body><h1 style='text-align:center;'>Beranda BARET</h1><img src='foto.jpg' style='display:block;margin:auto;width:90%;max-width:600px;border-radius:12px'><audio autoplay hidden><source src='tanah_airku.mp3' type='audio/mp3'></audio><footer style='text-align:center;margin-top:40px;'>Ikuti kami: <a href='https://instagram.com'>Instagram</a> | <a href='https://tiktok.com'>TikTok</a> | <a href='https://facebook.com'>Facebook</a> | <a href='https://wa.me/6285712790226'>WhatsApp</a> | <a href='https://livechat.com'>Live Chat</a></footer></body></html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Karang Taruna BARET</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background-color: #222;
+      padding: 20px;
+      color: gold;
+      font-size: 24px;
+      font-weight: bold;
+      text-shadow: 0 0 10px orange;
+      animation: slide 10s linear infinite;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    @keyframes slide {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    .foto-utama {
+      display: block;
+      margin: 30px auto;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 16px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.4);
+    }
+    nav a {
+      margin: 5px;
+      padding: 10px 16px;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      box-shadow: 0 4px #004a99;
+      transition: transform 0.1s ease;
+    }
+    nav a:active {
+      transform: scale(0.95);
+      box-shadow: 0 2px #003a80;
+    }
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>BARET</header>
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="visi-misi.html">Visi Misi</a>
+    <a href="struktur.html">Struktur</a>
+    <a href="profil.html">Profil</a>
+    <a href="saldo.html">Saldo</a>
+    <a href="galeri.html">Galeri</a>
+  </nav>
+  <main>
+    <h1>Selamat Datang di Website Resmi</h1>
+    <h2>Karang Taruna BARET</h2>
+    <p>Dapatkan info terbaru langsung dari website kami!</p>
+    <img src="foto.jpg" alt="Foto Anggota BARET" class="foto-utama" />
+  </main>
+  <audio autoplay hidden>
+    <source src="tanah_airku.mp3" type="audio/mp3">
+  </audio>
+  <footer>
+    Ikuti kami:
+    <a href="https://instagram.com">Instagram</a> |
+    <a href="https://tiktok.com">TikTok</a> |
+    <a href="https://facebook.com">Facebook</a> |
+    <a href="https://wa.me/6285712790226">WhatsApp</a> |
+    <a href="https://livechat.com">Live Chat</a>
+  </footer>
+</body>
+</html>
