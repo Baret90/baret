@@ -2,32 +2,20 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Saldo</title>
-    <link rel="stylesheet" href="style.css">
-
-<script>
-window.onload = function () {
-    const currentUser = localStorage.getItem("currentUser");
-    if (!currentUser) {
-        window.location.href = "login.html";
-    }
-}
-</script>
-
+  <meta charset="UTF-8">
+  <title>Saldo Karang Taruna BARET</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="saldo.js"></script>
 </head>
 <body>
-    <header>
-        <img src="logo.png" class="logo" alt="Logo">
-        
-<nav>
-    <button onclick="window.location.href='index.html#mainContent'"><i class="fas fa-home"></i> Beranda</button>
-</nav>
-
-    </header>
-    <main>
-        <h1>Saldo</h1>
-        <p>Konten halaman Saldo akan ditambahkan di sini.</p>
-    </main>
+  <header>
+    <h1>SALDO TERKINI</h1>
+  </header>
+  <main>
+    <div class="saldo-box">
+      RP <span id="saldo">0</span>
+    </div>
+  <img src='grafik_saldo.png' alt='Grafik Saldo' style='max-width:90%;margin-top:40px;'>
+</main>
 </body>
 </html>
