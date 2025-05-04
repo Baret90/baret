@@ -1,1 +1,25 @@
-body{font-family:sans-serif;background:#f1f1f1;margin:0}h1{color:#222}.nav-buttons a{background:#007bff;color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;box-shadow:0 4px #004a99}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: #333;
+  color: white;
+  padding: 20px 0;
+}
+.saldo-box {
+  margin: 100px auto;
+  font-size: 48px;
+  font-weight: bold;
+  color: green;
+  animation: glow 2s infinite;
+}
+@keyframes glow {
+  0% { text-shadow: 0 0 5px green; }
+  50% { text-shadow: 0 0 20px limegreen; }
+  100% { text-shadow: 0 0 5px green; }
+}
