@@ -1,0 +1,1 @@
+if(!localStorage.getItem('user')){window.location.href='masuk.html'}function logout(){localStorage.removeItem('user');window.location.href='masuk.html'}
