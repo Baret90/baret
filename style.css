@@ -1,1 +1,23 @@
 body{font-family:sans-serif;margin:0;padding:0;background:#f9f9f9}header{background:#222;color:gold;padding:10px;font-weight:bold;display:flex;align-items:center}nav.top-nav a{background:#007bff;color:#fff;padding:8px 12px;margin:5px;text-decoration:none;border-radius:8px;box-shadow:0 4px #004a99}nav.top-nav a:active{transform:scale(0.95)}footer{margin-top:40px;text-align:center}audio{display:none}
+
+/* Tombol 3D dan animasi */
+
+button, .sosmed a {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 5px #004999;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-weight: bold;
+  display: inline-block;
+  text-decoration: none;
+  margin: 5px;
+}
+
+button:active, .sosmed a:active {
+  box-shadow: 0 2px #003377;
+  transform: translateY(3px);
+}
