@@ -1,39 +1,25 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #f2f2f2;
+  background: #f9f9f9;
+  text-align: center;
   margin: 0;
   padding: 0;
 }
-header.main-header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #222;
+header {
+  background: #333;
   color: white;
-  padding: 15px 20px;
+  padding: 20px 0;
 }
-.logo-text {
-  font-size: 26px;
+.saldo-box {
+  margin: 100px auto;
+  font-size: 48px;
   font-weight: bold;
-  color: gold;
-  text-shadow: 1px 1px 4px orange;
+  color: green;
+  animation: glow 2s infinite;
 }
-.nav-buttons a {
-  background: dodgerblue;
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-  margin: 5px;
-  border-radius: 8px;
-  box-shadow: 0 4px #0a58ca;
-  font-weight: bold;
-}
-.nav-buttons a:active {
-  transform: translateY(2px);
-}
-main {
-  padding: 40px 20px;
-  text-align: center;
+@keyframes glow {
+  0% { text-shadow: 0 0 5px green; }
+  50% { text-shadow: 0 0 20px limegreen; }
+  100% { text-shadow: 0 0 5px green; }
 }
