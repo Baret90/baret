@@ -1,1 +1,1 @@
-console.log('Daftar script aktif');
+console.log('Daftar aktif')

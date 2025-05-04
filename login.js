@@ -1,1 +1,1 @@
-console.log('Login script aktif');
+console.log('Login aktif')

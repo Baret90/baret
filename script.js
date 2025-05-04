@@ -1,1 +1,1 @@
-console.log('Halaman dimuat');
+console.log('Script aktif')

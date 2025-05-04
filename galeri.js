@@ -1,1 +1,1 @@
-console.log('Galeri aktif');
+console.log('Galeri aktif')

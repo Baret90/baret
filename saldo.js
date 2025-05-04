@@ -1,1 +1,1 @@
-console.log('Saldo script aktif');
+console.log('Saldo aktif')
