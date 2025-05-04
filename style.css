@@ -1,1 +1,95 @@
-<!-- Dummy file: style.css -->
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f2f2f2;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.logo-nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.navbar {
+    flex-grow: 1;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.navbar button {
+    padding: 10px 15px;
+    background: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px #999;
+    transition: all 0.2s ease;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navbar button:active {
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background: #007BFF;
+    padding: 15px;
+    text-align: center;
+}
+
+.sosmed-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.sosmed {
+    background: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    box-shadow: 0 4px #555;
+    transition: all 0.2s ease;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sosmed:active {
+    box-shadow: 0 2px #333;
+    transform: translateY(2px);
+}
