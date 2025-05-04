@@ -235,3 +235,32 @@ footer a:active {
     transform: translateY(4px);
     box-shadow: 0 2px #600000;
 }
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #333;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+.logo-text {
+    margin-right: 20px;
+}
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .logo-text {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 18px;
+    }
+}
