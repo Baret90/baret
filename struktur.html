@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Struktur Organisasi - Karang Taruna BARET</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body onload="showLoggedInUser()">
     <header>
@@ -19,7 +20,7 @@
 
     <main>
         <h1>Struktur Organisasi</h1>
-        <p>Berikut adalah struktur organisasi kami.</p>
+        <canvas id="strukturChart" style="max-width: 600px; margin: 20px auto;"></canvas>
         <p id="userInfo" style="margin-top: 20px; font-style: italic;"></p>
     </main>
 
@@ -34,5 +35,29 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        const ctx = document.getElementById('strukturChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Ketua', 'Wakil Ketua', 'Sekretaris', 'Bendahara', 'Anggota'],
+                datasets: [{
+                    label: 'Jumlah Posisi',
+                    data: [1, 1, 1, 1, 10],
+                    backgroundColor: '#007BFF'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false },
+                    title: { display: true, text: 'Struktur Organisasi Karang Taruna BARET' }
+                },
+                scales: {
+                    y: { beginAtZero: true, precision: 0 }
+                }
+            }
+        });
+    </script>
 </body>
 </html>

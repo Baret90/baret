@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Laporan Saldo - Karang Taruna BARET</title>
+    <title>Saldo - Karang Taruna BARET</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body onload="showLoggedInUser()">
     <header>
@@ -19,7 +20,7 @@
 
     <main>
         <h1>Laporan Saldo</h1>
-        <p>Data grafik dan laporan keuangan Karang Taruna BARET.</p>
+        <canvas id="saldoChart" style="max-width: 700px; margin: 20px auto;"></canvas>
         <p id="userInfo" style="margin-top: 20px; font-style: italic;"></p>
     </main>
 
@@ -34,5 +35,35 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        const ctx = document.getElementById('saldoChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei'],
+                datasets: [{
+                    label: 'Saldo (Rp)',
+                    data: [1500000, 1750000, 1600000, 2000000, 2300000],
+                    fill: true,
+                    borderColor: '#007BFF',
+                    backgroundColor: 'rgba(0,123,255,0.2)',
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: { display: true, text: 'Perkembangan Saldo Karang Taruna BARET' },
+                    legend: { display: true }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { callback: value => 'Rp ' + value.toLocaleString() }
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
