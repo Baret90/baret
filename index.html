@@ -1,1 +1,62 @@
-<!-- Dummy file: index.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BARET - Beranda</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .logo {
+      display: block;
+      margin: 20px auto 10px auto;
+      max-height: 100px;
+    }
+    .logo-nav {
+      text-align: center;
+      padding: 10px 0 20px 0;
+    }
+    .navbar button, .auth-buttons button {
+      margin: 5px 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-nav">
+      <img src="logo_baret_animasi.gif" alt="Logo BARET" class="logo" />
+      <nav class="navbar">
+        <button onclick="window.location.href='index.html'">Beranda</button>
+        <button onclick="window.location.href='tentang.html'">Tentang</button>
+        <button onclick="window.location.href='visi.html'">Visi Misi</button>
+        <button onclick="window.location.href='struktur.html'">Struktur</button>
+        <button onclick="window.location.href='profil.html'">Profil</button>
+        <button onclick="window.location.href='galeri.html'">Galeri</button>
+        <button onclick="window.location.href='saldo.html'">Saldo</button>
+      </nav>
+      <div class="auth-buttons">
+        <button class="auth" onclick="window.location.href='login.html'">Login</button>
+        <button class="auth" onclick="window.location.href='register.html'">Daftar</button>
+        <button class="auth" onclick="window.location.href='admin_login.html'">Admin</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <img src="foto_utama.jpg" alt="Foto Utama" style="display:block;margin:30px auto;max-width:95%;height:auto;" />
+    <section class="welcome">
+      <h1 style="text-align:center;">Selamat Datang di Website Karang Taruna BARET</h1>
+      <p style="text-align:center;">Temukan informasi resmi, kegiatan, dan laporan Karang Taruna BARET di sini.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="sosmed-buttons" style="text-align:center; margin: 30px 0;">
+      <a href="https://www.instagram.com/karangtarunabaret" target="_blank"><button class="sosmed">Instagram</button></a>
+      <a href="https://www.tiktok.com/@karangtarunabaret" target="_blank"><button class="sosmed">TikTok</button></a>
+      <a href="https://www.facebook.com/karangtarunabaret" target="_blank"><button class="sosmed">Facebook</button></a>
+      <a href="https://wa.me/6285712790226" target="_blank"><button class="sosmed">WhatsApp</button></a>
+      <a href="livechat.html"><button class="sosmed">Live Chat</button></a>
+    </div>
+  </footer>
+</body>
+</html>
