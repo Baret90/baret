@@ -21,7 +21,6 @@
       border-radius: 10px;
       background: linear-gradient(to bottom, #f1c40f, #f39c12);
       box-shadow: 0 4px 6px rgba(0,0,0,0.2), inset 0 0 10px rgba(255,255,255,0.3);
-      position: relative;
       animation: glow 3s infinite linear;
       font-weight: bold;
     }
@@ -43,16 +42,16 @@
       gap: 15px;
       margin: 10px 0;
     }
-    .section-title {
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
       margin-top: 40px;
-      font-size: 20px;
-      font-weight: bold;
     }
-    .section-members {
-      max-width: 800px;
-      margin: auto;
-      padding: 10px;
-      font-size: 16px;
+    .section .node {
+      min-width: 200px;
+      max-width: 300px;
     }
   </style>
 </head>
@@ -69,15 +68,15 @@
     <div class="node">SEKRETARIS<br>MS Supriyadi<br>MS Suroso</div>
   </div>
 
-  <div class="section-title">SEKSI / BIDANG LAINNYA</div>
-  <div class="section-members">
-    <p><strong>Seksi Agama:</strong> MS Supri, MB Puji Widayati</p>
-    <p><strong>Seksi Keamanan:</strong> MS Sukoco, MS Waloyo</p>
-    <p><strong>Seksi Humas:</strong> MS Gii, MS Kotak, MS Warno (Trempok), MS Warno, MS Slamet Widodo, MS Tono, MS Genjlong, MS Sehmadi</p>
-    <p><strong>Seksi Kesenian:</strong> MS Surono, MS Anggi</p>
-    <p><strong>Seksi Dokumentasi:</strong> MS Yopik, MB Tri, MB Lina</p>
-    <p><strong>Admin Sosmed:</strong> MB Lia, MS Bejo, MS Bagas</p>
-    <p><strong>Pembantu Umum:</strong> Seluruh Anggota</p>
+  <h3 style="margin-top: 40px;">SEKSI / BIDANG LAINNYA</h3>
+  <div class="section">
+    <div class="node" style="text-align:left;">1. SEKSI AGAMA<br>- MS Supri<br>- MB Puji Widayati</div>
+    <div class="node" style="text-align:left;">2. SEKSI KEAMANAN<br>- MS Sukoco<br>- MS Waloyo</div>
+    <div class="node" style="text-align:left;">3. SEKSI HUMAS<br>- MS Gii<br>- MS Kotak<br>- MS Warno (Trempok)<br>- MS Warno<br>- MS Slamet Widodo<br>- MS Tono<br>- MS Genjlong<br>- MS Sehmadi</div>
+    <div class="node" style="text-align:left;">4. SEKSI KESENIAN<br>- MS Surono<br>- MS Anggi</div>
+    <div class="node" style="text-align:left;">5. SEKSI DOKUMENTASI<br>- MS Yopik<br>- MB Tri<br>- MB Lina</div>
+    <div class="node" style="text-align:left;">6. ADMIN SOSMED<br>- MB Lia<br>- MS Bejo<br>- MS Bagas</div>
+    <div class="node" style="text-align:left;">7. PEMBANTU UMUM<br>- Seluruh Anggota</div>
   </div>
 
   <div style="margin-top: 30px;">
