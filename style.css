@@ -1,9 +1,41 @@
 
-.auth.admin {
-  background: linear-gradient(to bottom, #e74c3c, #c0392b);
-  box-shadow: 0 4px #922b21;
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
 }
-.auth.admin:active {
-  box-shadow: 0 2px #641e16;
+
+.auth {
+  padding: 10px 15px;
+  background: linear-gradient(to bottom, #f39c12, #d68910);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px #a67c00;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.auth:active {
+  box-shadow: 0 2px #7e5c00;
+  transform: translateY(2px);
+}
+
+.navbar button {
+  padding: 10px 15px;
+  background: linear-gradient(to bottom, #f39c12, #d68910);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px #a67c00;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 2px;
+}
+
+.navbar button:active {
+  box-shadow: 0 2px #7e5c00;
   transform: translateY(2px);
 }
