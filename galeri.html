@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galeri Foto</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .gallery-container {
+      max-width: 1000px;
+      margin: 30px auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    .gallery-item {
+      position: relative;
+    }
+    .gallery-item img {
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+    .delete-btn {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: red;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 12px;
+      cursor: pointer;
+      padding: 4px 6px;
+      display: none;
+    }
+    .gallery-item:hover .delete-btn {
+      display: block;
+    }
+    .upload-form {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body onload="loadGallery()">
+  <header>
+    <div class="logo-nav">
+      <img src="logo_baret_animasi.gif" alt="Logo BARET" class="logo" />
+      <nav class="navbar">
+        <button onclick="navigate('index.html')">Beranda</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h2 style="text-align:center;">Galeri Foto Karang Taruna</h2>
+
+    <div class="upload-form">
+      <input type="file" id="uploadInput" accept="image/*" />
+      <button class="auth" onclick="uploadFoto()">Upload Foto</button>
+    </div>
+
+    <div class="gallery-container" id="gallery"></div>
+  </main>
+
+  <footer>
+    <div class="sosmed-buttons">
+      <a href="#"><button class="sosmed">Instagram</button></a>
+      <a href="#"><button class="sosmed">TikTok</button></a>
+      <a href="#"><button class="sosmed">Facebook</button></a>
+      <a href="#"><button class="sosmed">WhatsApp</button></a>
+      <a href="#"><button class="sosmed">Live Chat</button></a>
+    </div>
+  </footer>
+
+  <script>
+    function uploadFoto() {
+      const fileInput = document.getElementById("uploadInput");
+      const file = fileInput.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        let gallery = JSON.parse(localStorage.getItem("galeriBaret") || "[]");
+        gallery.push(e.target.result);
+        localStorage.setItem("galeriBaret", JSON.stringify(gallery));
+        loadGallery();
+        fileInput.value = '';
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function loadGallery() {
+      const gallery = JSON.parse(localStorage.getItem("galeriBaret") || "[]");
+      const container = document.getElementById("gallery");
+      container.innerHTML = "";
+      gallery.forEach((foto, index) => {
+        const div = document.createElement("div");
+        div.className = "gallery-item";
+        div.innerHTML = `
+          <img src="${foto}" />
+          <button class="delete-btn" onclick="hapusFoto(${index})">Hapus</button>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    function hapusFoto(index) {
+      if (!confirm("Yakin ingin menghapus foto ini?")) return;
+      let gallery = JSON.parse(localStorage.getItem("galeriBaret") || "[]");
+      gallery.splice(index, 1);
+      localStorage.setItem("galeriBaret", JSON.stringify(gallery));
+      loadGallery();
+    }
+
+    function navigate(page) {
+      window.location.href = page;
+    }
+  </script>
+</body>
+</html>
