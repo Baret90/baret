@@ -25,14 +25,18 @@
       margin-bottom: 10px;
       color: #555;
     }
-    .section button {
-      padding: 10px 15px;
+    .section button,
+    .section input {
+      padding: 10px;
       margin-top: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .section button {
       background: linear-gradient(to bottom, #f39c12, #d68910);
       color: white;
       font-weight: bold;
       border: none;
-      border-radius: 8px;
       box-shadow: 0 4px #a67c00;
       cursor: pointer;
     }
@@ -40,9 +44,13 @@
       box-shadow: 0 2px #7e5c00;
       transform: translateY(2px);
     }
+    .danger {
+      background: #c0392b;
+      box-shadow: 0 4px #922b21;
+    }
   </style>
 </head>
-<body onload="cekAdmin()">
+<body onload="cekAdmin(); showSaldo()">
   <div class="dashboard">
     <h2>Selamat Datang, Admin!</h2>
 
@@ -54,12 +62,14 @@
 
     <div class="section">
       <h3>Tambah Data Saldo</h3>
-      <p>Sementara ini data saldo ditambahkan manual. Versi input langsung segera ditambahkan.</p>
-      <button onclick="window.location.href='saldo.html'">Lihat Grafik Saldo</button>
+      <input type="text" id="bulan" placeholder="Contoh: Juli" />
+      <input type="number" id="jumlah" placeholder="Jumlah saldo (dalam ribu)" />
+      <button onclick="tambahSaldo()">Simpan</button>
+      <div id="data-saldo"></div>
     </div>
 
     <div class="section">
-      <button style="background: #c0392b; box-shadow: 0 4px #922b21;" onclick="logoutAdmin()">Logout Admin</button>
+      <button class="danger" onclick="logoutAdmin()">Logout Admin</button>
     </div>
   </div>
 
@@ -75,6 +85,30 @@
       localStorage.removeItem("isAdmin");
       alert("Anda telah logout dari akun admin.");
       window.location.href = "admin_login.html";
+    }
+
+    function tambahSaldo() {
+      let bulan = document.getElementById("bulan").value;
+      let jumlah = parseInt(document.getElementById("jumlah").value);
+      if (!bulan || isNaN(jumlah)) {
+        alert("Mohon isi semua data dengan benar.");
+        return;
+      }
+
+      let saldo = JSON.parse(localStorage.getItem("saldoData") || "[]");
+      saldo.push({ bulan: bulan, jumlah: jumlah });
+      localStorage.setItem("saldoData", JSON.stringify(saldo));
+      showSaldo();
+      document.getElementById("bulan").value = "";
+      document.getElementById("jumlah").value = "";
+    }
+
+    function showSaldo() {
+      let container = document.getElementById("data-saldo");
+      let saldo = JSON.parse(localStorage.getItem("saldoData") || "[]");
+      container.innerHTML = "<h4>Data Tersimpan:</h4><ul>" +
+        saldo.map(item => `<li>${item.bulan}: ${item.jumlah} ribu</li>`).join("") +
+        "</ul>";
     }
   </script>
 </body>
