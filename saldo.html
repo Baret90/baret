@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grafik Saldo</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    canvas {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body onload="generateChart()">
+  <header>
+    <div class="logo-nav">
+      <img src="logo_baret_animasi.gif" alt="Logo BARET" class="logo" />
+      <nav class="navbar">
+        <button onclick="window.location.href='index.html'">Beranda</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h2 style="text-align:center;">Grafik Saldo Karang Taruna</h2>
+    <canvas id="chartSaldo"></canvas>
+  </main>
+
+  <script>
+    function generateChart() {
+      let data = JSON.parse(localStorage.getItem("saldoData") || "[]");
+      let labels = data.map(item => item.bulan);
+      let values = data.map(item => item.jumlah);
+
+      new Chart(document.getElementById("chartSaldo"), {
+        type: "line",
+        data: {
+          labels: labels,
+          datasets: [{
+            label: "Saldo (Ribu Rupiah)",
+            data: values,
+            borderColor: "#f39c12",
+            backgroundColor: "rgba(243, 156, 18, 0.3)",
+            fill: true,
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+            title: { display: true, text: "Perkembangan Saldo" }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: { callback: val => val + "k" }
+            }
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>
