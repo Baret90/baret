@@ -1,65 +1,26 @@
 
-// Simpan akun baru
-function register() {
-    const username = document.getElementById("newUsername").value.trim().toLowerCase();
-    const password = document.getElementById("newPassword").value;
+document.addEventListener("DOMContentLoaded", function () {
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
 
-    if (!username || !password) {
-        alert("Username dan password tidak boleh kosong.");
-        return;
-    }
+  const protectedButtons = [
+    "Tentang",
+    "Visi Misi",
+    "Struktur",
+    "Profil",
+    "Galeri",
+    "Saldo",
+    "Live Chat"
+  ];
 
-    const users = JSON.parse(localStorage.getItem("users") || "{}");
-
-    if (users[username]) {
-        alert("Username sudah terdaftar. Silakan pilih username lain.");
-        return;
-    }
-
-    users[username] = password;
-    localStorage.setItem("users", JSON.stringify(users));
-    alert("Pendaftaran berhasil! Silakan login.");
-    window.location.href = "login.html";
-}
-
-// Login pengguna
-function login(username, password) {
-    username = username.trim().toLowerCase();
-    const users = JSON.parse(localStorage.getItem("users") || "{}");
-
-    if (users[username] && users[username] === password) {
-        localStorage.setItem("isLoggedIn", "true");
-        localStorage.setItem("loggedInUser", username);
-        alert("Login berhasil!");
-        window.location.href = "index.html";
-    } else {
-        alert("Username atau password salah.");
-    }
-}
-
-// Navigasi dengan login check
-function navigate(page) {
-    if (isLoggedIn()) {
-        window.location.href = page;
-    } else {
-        alert("Silakan login terlebih dahulu untuk mengakses halaman ini.");
-    }
-}
-
-function isLoggedIn() {
-    return localStorage.getItem("isLoggedIn") === "true";
-}
-
-function logout() {
-    localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("loggedInUser");
-    alert("Anda telah logout.");
-    window.location.href = "login.html";
-}
-
-function showLoggedInUser() {
-    const user = localStorage.getItem("loggedInUser");
-    if (user && document.getElementById("userInfo")) {
-        document.getElementById("userInfo").innerText = "Login sebagai: " + user;
-    }
-}
+  protectedButtons.forEach(id => {
+    const buttons = document.querySelectorAll(`button`);
+    buttons.forEach(button => {
+      if (button.innerText.trim() === id && !isLoggedIn) {
+        button.disabled = true;
+        button.style.opacity = 0.5;
+        button.title = "Silakan login untuk mengakses fitur ini";
+        button.style.cursor = "not-allowed";
+      }
+    });
+  });
+});
