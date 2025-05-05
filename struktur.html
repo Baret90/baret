@@ -6,42 +6,82 @@
   <title>Struktur Organisasi</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    main {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
+    body {
+      font-family: sans-serif;
       background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-    h2 {
+      margin: 0;
+      padding: 20px;
       text-align: center;
-      margin-bottom: 20px;
     }
-    ul { padding-left: 20px; }
+    .node {
+      display: inline-block;
+      padding: 10px 15px;
+      margin: 10px auto;
+      border: 2px solid #333;
+      border-radius: 10px;
+      background: linear-gradient(to bottom, #f1c40f, #f39c12);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2), inset 0 0 10px rgba(255,255,255,0.3);
+      position: relative;
+      animation: glow 3s infinite linear;
+      font-weight: bold;
+    }
+    @keyframes glow {
+      0% { box-shadow: 0 0 5px #ffd700; }
+      50% { box-shadow: 0 0 20px #ffd700; }
+      100% { box-shadow: 0 0 5px #ffd700; }
+    }
+    .line {
+      width: 2px;
+      height: 20px;
+      background: #333;
+      margin: auto;
+    }
+    .branch {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 10px 0;
+    }
+    .section-title {
+      margin-top: 40px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .section-members {
+      max-width: 800px;
+      margin: auto;
+      padding: 10px;
+      font-size: 16px;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo-nav">
-      <img src="logo_baret_animasi.gif" alt="Logo BARET" class="logo" />
-      <nav class="navbar">
-        <button onclick="window.location.href='index.html'">Beranda</button>
-      </nav>
-    </div>
-  </header>
+  <h2>Struktur Organisasi Karang Taruna BARET</h2>
+  <div class="node">PEMBINA UTAMA<br>Bpk Sumadi</div>
+  <div class="line"></div>
+  <div class="node">KETUA<br>MS Giono</div>
+  <div class="line"></div>
+  <div class="node">WAKIL KETUA<br>MS Joko</div>
+  <div class="line"></div>
+  <div class="branch">
+    <div class="node">BENDAHARA<br>MS Wahyu (IS)<br>MB Devi Sekar R</div>
+    <div class="node">SEKRETARIS<br>MS Supriyadi<br>MS Suroso</div>
+  </div>
 
-  <main>
-    <h2>Struktur Organisasi Karang Taruna</h2>
-    <ul>
-      <li>Ketua: Andi Permana</li>
-      <li>Wakil Ketua: Budi Santoso</li>
-      <li>Sekretaris: Citra Melati</li>
-      <li>Bendahara: Dwi Lestari</li>
-      <li>Bidang Pendidikan: Eko Saputra</li>
-      <li>Bidang Ekonomi: Fitriani</li>
-      <li>Bidang Seni & Budaya: Galih Pratama</li>
-    </ul>
-  </main>
+  <div class="section-title">SEKSI / BIDANG LAINNYA</div>
+  <div class="section-members">
+    <p><strong>Seksi Agama:</strong> MS Supri, MB Puji Widayati</p>
+    <p><strong>Seksi Keamanan:</strong> MS Sukoco, MS Waloyo</p>
+    <p><strong>Seksi Humas:</strong> MS Gii, MS Kotak, MS Warno (Trempok), MS Warno, MS Slamet Widodo, MS Tono, MS Genjlong, MS Sehmadi</p>
+    <p><strong>Seksi Kesenian:</strong> MS Surono, MS Anggi</p>
+    <p><strong>Seksi Dokumentasi:</strong> MS Yopik, MB Tri, MB Lina</p>
+    <p><strong>Admin Sosmed:</strong> MB Lia, MS Bejo, MS Bagas</p>
+    <p><strong>Pembantu Umum:</strong> Seluruh Anggota</p>
+  </div>
+
+  <div style="margin-top: 30px;">
+    <button onclick="window.location.href='index.html'" style="padding: 10px 20px; font-weight:bold;">Beranda</button>
+  </div>
 </body>
 </html>
