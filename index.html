@@ -1,13 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Index</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BARET - Beranda</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      background: #fff;
+    }
+    header {
+      background-color: black;
+      padding: 10px;
+    }
+    header img {
+      max-width: 200px;
+    }
+    nav {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    nav a {
+      background: linear-gradient(to bottom, #f0ad00, #d88c00);
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      font-weight: bold;
+      border-radius: 10px;
+      box-shadow: 0 4px #b36b00;
+      text-decoration: none;
+      transition: transform 0.1s;
+    }
+    nav a:active {
+      transform: scale(0.95);
+    }
+    .main-img {
+      max-width: 90%;
+      height: auto;
+      margin: 20px auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+  </style>
 </head>
 <body>
-  <h1>Index</h1>
-  <p>Ini adalah halaman index.</p>
-  
+
+<header>
+  <img src="logo_baret_animasi.gif" alt="Logo BARET">
+</header>
+
+<nav>
+  <a href="tentang.html">Tentang</a>
+  <a href="visi_misi.html">Visi Misi</a>
+  <a href="struktur.html">Struktur</a>
+  <a href="profil.html">Profil</a>
+  <a href="galeri.html">Galeri</a>
+  <a href="saldo.html">Saldo</a>
+  <a href="login.html">Login</a>
+  <a href="register.html">Daftar</a>
+  <a href="admin_login.html">Admin</a>
+</nav>
+
+<img src="foto_utama.jpg" alt="Foto Utama" class="main-img">
+
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
