@@ -1,1 +1,1 @@
-document.addEventListener('DOMContentLoaded',()=>{console.log('Script aktif')});
+// script.js placeholder
